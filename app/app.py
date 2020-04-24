@@ -43,7 +43,6 @@ logging = loggers.get_stdout_logging(
 # Start Flask App
 app = Flask(__name__)
 
-
 ###
 # Endpoints
 ###
@@ -56,4 +55,4 @@ def index():
     """
 
     content = open(f"{BASE_PROJECT_PATH}/README.md")
-    return Response(content, mimetype="ext/markdown; charset=UTF-8")
+    return Response(content, mimetype="text/markdown; charset=UTF-8")
